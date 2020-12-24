@@ -245,6 +245,7 @@ header .menu-btn {
     height: 890px;
     position: relative;
     z-index: 1;
+    margin-bottom: 13%;
 }
 .banner-text {display: table}
 .banner-area .container, .banner-area .row, .banner-area .col-md-8, .banner-area .banner-text, .banner-area .banner-table-cell {
@@ -371,12 +372,14 @@ header .menu-btn {
     top: 0;
 }
 .sin-screenshot a:hover:before {opacity: 0.2;filter:alpha(opacity=20)}
-#screenshot-carousel {z-index: 9;}
+#screenshot-carousel {
+    z-index: 9;
+    margin-bottom: 5%;
+}
 /*--------------------------------------------*/
 /*  11. Footer Area
 /*--------------------------------------------*/
 .footer-area {
-    background-image: url("img/banner/4.jpg");
 	background-size:cover;
 	background-position:center top;
 	background-repeat:no-repeat;
@@ -396,7 +399,41 @@ header .menu-btn {
     line-height: 20px;
     text-transform: uppercase;
 }
-
+form#contact-form {
+    margin-right: 21px;
+    margin-top: 46px;
+}
+.form-control {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: none;
+    color: #cccccc;
+    height: 42px;
+    margin-bottom: 3px;
+    padding: 8px 17px;
+}
+textarea.form-control {
+    height: 99px;
+    resize: none;
+}
+.submit-form .button {
+    background-color: #7a9757;
+    border-radius: 7px;
+    color: #ffffff;
+    font-family: "latomedium";
+    height: 44px;
+    margin-top: 21px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+    width: 100%;
+    border: 0
+}
+.submit-form .button:hover, .footer-blue .submit-form .button:hover, .footer-yellow .submit-form .button:hover {
+    background-color: #fff;
+    color: #2d3e50;
+}
 .contact-icon {
     background-color: #7a9757;
     border-radius: 21px 21px 0;
@@ -427,8 +464,10 @@ header .menu-btn {
     overflow: hidden;
 }
 .contact-text {display: inline-block}
-.conatct-info {margin-top: 52px}
-
+.conatct-info {
+    margin: auto 25px;
+    
+}
 /*--------------------------------------------*/
 /*  11.3 Footer
 /*--------------------------------------------*/
@@ -519,6 +558,125 @@ header .menu-btn {
     justify-content: center;
 
 }
-#row-align h3{
+.row h3{
     text-align: center;
+    margin-bottom: 30px;
+}
+.download-area:before, .footer-area:before, .banner-area:before, .domain-name-area:before {
+    background-image: url("img/banner/shape.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    content: "";
+    height: 323px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.download-area:after, .domain-name-area:after {
+    background-image: url("img/banner/shape.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    height: 323px;
+    right: 0;
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    z-index: 1;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+.download-bg, .footer-bg {
+    background: rgba(45, 62, 80, 0.85) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.banner-area:before {
+    bottom: 0px;
+    right: 0;
+    top: auto;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+/*--------------------------------------------*/
+/*  5. Service Area
+/*--------------------------------------------*/
+.service-area {
+    padding-bottom: 284px;
+    padding-top: 306px;
+    position: relative;
+}
+.service-area:after {
+    background: #f0f0f0 none repeat scroll 0 0;
+    content: "";
+    height: 518px;
+    left: 0;
+    position: absolute;
+    top: 10%;
+    -webkit-transform: skewY(165deg);
+    -ms-transform: skewY(165deg);
+    transform: skewY(165deg);
+    width: 100%;
+    z-index: -1;
+}
+.single-item-icon {
+    background-color: #7a9757;
+    border-radius: 36px 36px 0;
+    display: inline-table;
+    height: 100px;
+    margin-bottom: 24px;
+    text-align: center;
+    width: 100px;
+    -webkit-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s
+}
+.single-item-icon i {
+    color: #ffffff;
+    display: table-cell;
+    font-size: 50px;
+    vertical-align: middle;
+}
+.single-item h4 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+.service-area .col-md-4:nth-child(2) {margin-top: -100px}
+.service-area .col-md-4:nth-child(3) {margin-top: -200px}
+.single-item:hover .single-item-icon {background-color: #2d3e50}
+.service-area:after {
+    background: #f0f0f0 none repeat scroll 0 0;
+    content: "";
+    height: 518px;
+    left: 0;
+    position: absolute;
+    top: 10%;
+    -webkit-transform: skewY(165deg);
+    -ms-transform: skewY(165deg);
+    transform: skewY(165deg);
+    width: 100%;
+    z-index: -1;
+}
+@media(max-width:769px){
+    .service-area{
+        padding: 0!important;
+    }
+    .service-area .single-item{
+        margin: 0 auto;
+        width: 200px;
+    }
+    .service-area #special-padding{
+        padding: 150px 0px 250px 0px;        
+    }
 }
